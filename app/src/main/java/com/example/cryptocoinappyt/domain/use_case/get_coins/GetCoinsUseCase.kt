@@ -21,7 +21,7 @@ class GetCoinsUseCase @Inject constructor(
             }
             emit(Resource.Success(data = coins))
         } catch (e: HttpException) {
-            emit(Resource.Error(message = e.localizedMessage ?: "An unexpected error occured"))
+            emit(Resource.Error(message = e.localizedMessage ?: "An unexpected error occurred"))
         } catch (e: IOException) {
             emit(Resource.Error(message = "Could`t reach server. Check your internet connect"))
         }
